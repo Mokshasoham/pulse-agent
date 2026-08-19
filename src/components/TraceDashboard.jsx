@@ -23,8 +23,9 @@ export const TraceDashboard = ({ konamiActive = false }) => {
   const [activeTab, setActiveTab] = useState('diagnostics');
   const [copiedPayload, setCopiedPayload] = useState(false);
   const [isReplaying, setIsReplaying] = useState(false);
-  const [replayedSteps, setReplayedSteps] = useState>({});
+  const [replayedSteps, setReplayedSteps] = useState({});
   const [hoveredStepId, setHoveredStepId] = useState(null);
+
   
   const containerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
