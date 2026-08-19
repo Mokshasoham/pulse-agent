@@ -2,12 +2,7 @@ import React from 'react';
 import { Sparkles, X, RotateCcw } from 'lucide-react';
 
 
-interface KonamiToastProps {
-  active: boolean;
-  onDismiss: () => void;
-}
-
-export const KonamiToast: React.FC<KonamiToastProps> = ({ active, onDismiss }) => {
+export const KonamiToast = ({ active, onDismiss }) => {
   if (!active) return null;
 
   return (

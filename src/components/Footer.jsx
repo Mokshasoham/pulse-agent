@@ -1,11 +1,7 @@
 import React from 'react';
 import { Activity, Sparkles } from 'lucide-react';
 
-interface FooterProps {
-  onTriggerKonami?: () => void;
-}
-
-export const Footer: React.FC<FooterProps> = ({ onTriggerKonami }) => {
+export const Footer = ({ onTriggerKonami }) => {
   return (
     <footer className="border-t border-zinc-200 dark:border-zinc-800/80 bg-zinc-50 dark:bg-zinc-950/60 py-12 text-zinc-600 dark:text-zinc-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

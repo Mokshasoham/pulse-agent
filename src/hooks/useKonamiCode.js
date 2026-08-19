@@ -16,10 +16,10 @@ const KONAMI_CODE = [
 
 export function useKonamiCode() {
   const [isTriggered, setIsTriggered] = useState(false);
-  const sequenceRef = useRef<string[]>([]);
+  const sequenceRef = useRef([]);
 
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e) => {
       const key = e.key.toLowerCase() === 'b' ? 'b' : e.key.toLowerCase() === 'a' ? 'a' : e.key;
       
       sequenceRef.current = [...sequenceRef.current, key].slice(-KONAMI_CODE.length);
@@ -48,7 +48,7 @@ export function useKonamiCode() {
       const count = 200;
       const defaults = { origin: { y: 0.7 } };
 
-      const fire = (particleRatio: number, opts: confetti.Options) => {
+      const fire = (particleRatio, opts) => {
         confetti({
           ...defaults,
           ...opts,

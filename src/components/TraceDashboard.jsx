@@ -15,22 +15,18 @@ import {
 } from 'lucide-react';
 import { SCENARIOS } from '../data/mockTraces';
 
-interface TraceDashboardProps {
-  konamiActive?: boolean;
-}
-
-export const TraceDashboard: React.FC<TraceDashboardProps> = ({ konamiActive = false }) => {
+export const TraceDashboard = ({ konamiActive = false }) => {
   const [selectedScenarioIndex, setSelectedScenarioIndex] = useState(0);
   const currentScenario = SCENARIOS[selectedScenarioIndex];
   
-  const [selectedStepId, setSelectedStepId] = useState<string>(currentScenario.steps[2]?.id || currentScenario.steps[0].id);
-  const [activeTab, setActiveTab] = useState<'diagnostics' | 'input' | 'output' | 'waterfall'>('diagnostics');
+  const [selectedStepId, setSelectedStepId] = useState(currentScenario.steps[2]?.id || currentScenario.steps[0].id);
+  const [activeTab, setActiveTab] = useState('diagnostics');
   const [copiedPayload, setCopiedPayload] = useState(false);
   const [isReplaying, setIsReplaying] = useState(false);
-  const [replayedSteps, setReplayedSteps] = useState<Record<string, boolean>>({});
-  const [hoveredStepId, setHoveredStepId] = useState<string | null>(null);
+  const [replayedSteps, setReplayedSteps] = useState>({});
+  const [hoveredStepId, setHoveredStepId] = useState(null);
   
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -58,7 +54,7 @@ export const TraceDashboard: React.FC<TraceDashboardProps> = ({ konamiActive = f
 
   const activeStep = currentScenario.steps.find((s) => s.id === selectedStepId) || currentScenario.steps[0];
 
-  const handleCopy = (text: string) => {
+  const handleCopy = (text) => {
     navigator.clipboard.writeText(text);
     setCopiedPayload(true);
     setTimeout(() => setCopiedPayload(false), 2000);
@@ -77,7 +73,7 @@ export const TraceDashboard: React.FC<TraceDashboardProps> = ({ konamiActive = f
     }, 950);
   };
 
-  const isStepFixed = (stepId: string) => Boolean(replayedSteps[stepId]) || konamiActive;
+  const isStepFixed = (stepId) => Boolean(replayedSteps[stepId]) || konamiActive;
 
   return (
     <section id="trace-inspector" ref={containerRef} className="py-16 md:py-24 relative overflow-hidden">

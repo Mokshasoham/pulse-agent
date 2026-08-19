@@ -3,7 +3,7 @@ import { PRICING_TIERS } from '../data/mockTraces';
 import { Check, ArrowRight } from 'lucide-react';
 
 
-export const Pricing: React.FC = () => {
+export const Pricing = () => {
   return (
     <section id="pricing" className="py-16 md:py-24 bg-zinc-50/50 dark:bg-zinc-900/30 border-t border-zinc-200 dark:border-zinc-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

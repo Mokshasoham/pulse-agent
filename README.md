@@ -41,7 +41,7 @@ PulseAgent is an engineering-grade observability platform designed specifically 
 ---
 
 ## Tech Stack
-- **Framework**: React 19 + TypeScript + Vite
+- **Framework**: React 19 + JavaScript + Vite
 - **Styling**: Tailwind CSS v4
 - **Typography**: Plus Jakarta Sans & JetBrains Mono (Google Fonts)
 - **Icons**: Lucide React

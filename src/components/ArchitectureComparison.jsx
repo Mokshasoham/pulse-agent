@@ -1,7 +1,7 @@
 import React from 'react';
 import { XCircle, CheckCircle2 } from 'lucide-react';
 
-export const ArchitectureComparison: React.FC = () => {
+export const ArchitectureComparison = () => {
 
 
   return (

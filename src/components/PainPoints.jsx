@@ -9,7 +9,7 @@ const iconMap = {
   PlayCircle
 };
 
-export const PainPoints: React.FC = () => {
+export const PainPoints = () => {
   return (
     <section id="capabilities" className="py-16 md:py-24 bg-zinc-50/50 dark:bg-zinc-900/30 border-y border-zinc-200 dark:border-zinc-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,7 +28,7 @@ export const PainPoints: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {CORE_PAIN_POINTS.map((item) => {
 
-            const IconComponent = iconMap[item.icon as keyof typeof iconMap] || AlertTriangle;
+            const IconComponent = iconMap[item.icon ] || AlertTriangle;
 
             return (
               <div

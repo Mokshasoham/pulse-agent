@@ -13,7 +13,7 @@ import { KonamiToast } from './components/KonamiToast';
 import { useKonamiCode } from './hooks/useKonamiCode';
 
 export function App() {
-  const [darkMode, setDarkMode] = useState<boolean>(() => {
+  const [darkMode, setDarkMode] = useState(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('pulseagent_theme');
       if (saved) return saved === 'dark';

@@ -3,8 +3,8 @@ import { CODE_SNIPPETS } from '../data/mockTraces';
 import { Copy, Check, ShieldCheck, Zap, Server } from 'lucide-react';
 
 
-export const SdkIntegration: React.FC = () => {
-  const [activeLang, setActiveLang] = useState<'python' | 'typescript' | 'rest'>('python');
+export const SdkIntegration = () => {
+  const [activeLang, setActiveLang] = useState('python');
   const [copiedCode, setCopiedCode] = useState(false);
 
   const handleCopy = () => {

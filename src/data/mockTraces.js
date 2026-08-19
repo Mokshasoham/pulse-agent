@@ -1,6 +1,4 @@
-import type { AgentScenario, PricingTier, FaqItem } from '../types';
-
-export const SCENARIOS: AgentScenario[] = [
+export const SCENARIOS = [
   {
     id: 'support-refund-agent',
     title: 'Customer Autonomous Refund Graph',
@@ -406,7 +404,7 @@ async function executeAgentChain(userInput: string) {
 }`
 };
 
-export const PRICING_TIERS: PricingTier[] = [
+export const PRICING_TIERS = [
   {
     name: 'Developer Community',
     description: 'For engineers building and testing autonomous agents locally and in staging.',
@@ -457,7 +455,7 @@ export const PRICING_TIERS: PricingTier[] = [
   }
 ];
 
-export const FAQ_ITEMS: FaqItem[] = [
+export const FAQ_ITEMS = [
   {
     question: 'How much latency does PulseAgent introduce into our production agent loop?',
     answer: 'Less than 1.2ms p99 overhead. Telemetry spans are enqueued into a lock-free ring buffer and shipped asynchronously in batched background threads. Your agent never blocks on network I/O to PulseAgent.',

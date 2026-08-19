@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { ShieldAlert, Clock, Coins } from 'lucide-react';
 
 
-export const CostLatencySimulator: React.FC = () => {
-  const [dailyRuns, setDailyRuns] = useState<number>(10000);
-  const [stepsPerRun, setStepsPerRun] = useState<number>(5);
-  const [modelType, setModelType] = useState<'sonnet' | 'gpt4o' | 'mini' | 'deepseek'>('sonnet');
+export const CostLatencySimulator = () => {
+  const [dailyRuns, setDailyRuns] = useState(10000);
+  const [stepsPerRun, setStepsPerRun] = useState(5);
+  const [modelType, setModelType] = useState('sonnet');
 
   // Pricing constants (per 1k tokens combined avg)
   const modelRates = {
@@ -116,7 +116,7 @@ export const CostLatencySimulator: React.FC = () => {
                   Primary Model In Loop
                 </label>
                 <div className="grid grid-cols-2 gap-2">
-                  {(Object.keys(modelLabels) as Array<keyof typeof modelLabels>).map((key) => (
+                  {Object.keys(modelLabels).map((key) => (
                     <button
                       key={key}
                       onClick={() => setModelType(key)}

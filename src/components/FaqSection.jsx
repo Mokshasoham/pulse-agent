@@ -3,10 +3,10 @@ import { FAQ_ITEMS } from '../data/mockTraces';
 import { ChevronDown } from 'lucide-react';
 
 
-export const FaqSection: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+export const FaqSection = () => {
+  const [openIndex, setOpenIndex] = useState(0);
 
-  const toggleIndex = (idx: number) => {
+  const toggleIndex = (idx) => {
     setOpenIndex(openIndex === idx ? null : idx);
   };
 

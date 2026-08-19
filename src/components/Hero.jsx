@@ -2,13 +2,9 @@ import React, { useState } from 'react';
 import { ArrowRight, Copy, Check, Terminal } from 'lucide-react';
 
 
-interface HeroProps {
-  onExploreTrace: () => void;
-}
-
-export const Hero: React.FC<HeroProps> = ({ onExploreTrace }) => {
+export const Hero = ({ onExploreTrace }) => {
   const [copiedInstall, setCopiedInstall] = useState(false);
-  const [pkgManager, setPkgManager] = useState<'python' | 'npm'>('python');
+  const [pkgManager, setPkgManager] = useState('python');
 
   const installCommands = {
     python: 'pip install pulseagent',

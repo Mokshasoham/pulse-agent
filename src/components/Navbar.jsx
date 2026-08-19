@@ -2,13 +2,7 @@ import React, { useState } from 'react';
 import { Activity, Sun, Moon, Menu, X, ArrowRight, Cpu } from 'lucide-react';
 
 
-interface NavbarProps {
-  darkMode: boolean;
-  setDarkMode: (val: boolean) => void;
-  onExploreTrace: () => void;
-}
-
-export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode, onExploreTrace }) => {
+export const Navbar = ({ darkMode, setDarkMode, onExploreTrace }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
@@ -21,7 +15,7 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode, onExplore
     { label: 'FAQ', href: '#faq' },
   ];
 
-  const handleNavClick = (href: string) => {
+  const handleNavClick = (href) => {
     setMobileMenuOpen(false);
     const element = document.querySelector(href);
     if (element) {
