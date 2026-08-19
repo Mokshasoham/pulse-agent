@@ -1,4 +1,4 @@
-﻿# PulseAgent — The Observability Standard for Autonomous LLM Agent Pipelines
+# PulseAgent — The Observability Standard for Autonomous LLM Agent Pipelines
 
 > "You wouldn't ship a backend with no logs. Why is your agent a black box?"
 
@@ -7,8 +7,8 @@ PulseAgent is an engineering-grade observability platform designed specifically 
 ---
 
 ## Live Demo & Repository
-- **Live Deployed URL**: [pulseagent.vercel.app](https://pulseagent.vercel.app)
-- **Repository**: [github.com/Mokshasoham/pulseagent](https://github.com/Mokshasoham/pulseagent)
+- **Live Deployed URL**: [https://acdyon-project-sooty.vercel.app/](https://acdyon-project-sooty.vercel.app/)
+- **Repository**: [https://github.com/Mokshasoham/Acdyon-project](https://github.com/Mokshasoham/Acdyon-project)
 - **Engineering Decisions**: See [`DECISIONS.md`](./DECISIONS.md)
 
 ---
@@ -45,15 +45,15 @@ PulseAgent is an engineering-grade observability platform designed specifically 
 - **Styling**: Tailwind CSS v4
 - **Typography**: Plus Jakarta Sans & JetBrains Mono (Google Fonts)
 - **Icons**: Lucide React
-- **Motion**: Pure CSS Transitions, `@keyframes`, and React state (Zero external animation library)
+- **Motion**: Pure CSS Transitions and `@keyframes` for all core UI motion — no animation library used for the primary micro-interactions. `canvas-confetti` is used only for the optional Konami-code easter egg.
 
 ---
 
 ## Local Development
 ```bash
 # 1. Clone repository
-git clone https://github.com/Mokshasoham/pulseagent.git
-cd pulseagent
+git clone https://github.com/Mokshasoham/Acdyon-project.git
+cd Acdyon-project
 
 # 2. Install dependencies
 npm install
@@ -64,3 +64,4 @@ npm run dev
 # 4. Build production bundle
 npm run build
 ```
+
